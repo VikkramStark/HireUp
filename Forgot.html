@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Resetting</title>
+</head>
+<body>
+    <div id = 'circle1'></div>
+    <div id = 'circle2'></div>
+    <div class="container">
+        <form action = '' onsubmit = "return false">   
+            <h3>Password Reset Link Form</h3> 
+            <input type="email" placeholder = 'Email ID' id = 'mail' required/> 
+            <input type="number" placeholder = 'Phone number' id = 'ph' required/>
+            <button type = 'submit' id = 'sub'>Submit</button>   
+            <div class = 'adjust'><a href = 'index.html' id = 'back'>Return to Login page</a></div> 
+        </form>
+    </div>
+    <style rel = 'stylesheet' type = 'text/css'>  
+        *{
+            margin:0px; 
+            padding:0px; 
+            box-sizing:border-box; 
+        }
+
+        body{
+            position:relative;  
+            height:100vh; 
+            width:100vw; 
+            background: linear-gradient(to right, #00c9ff, #92fe9d); 
+        }
+
+        .container form h3{
+            font-size:40px; 
+            font-family:Arial, Helvetica, sans-serif; 
+            letter-spacing :5px ; 
+            word-spacing : 10px;
+            color:whitesmoke; 
+            text-transform:uppercase;   
+            padding:20px 30px;   
+        }
+
+        .container{
+            position:absolute; 
+            width:50%; 
+            height:70%; 
+            top:50%; 
+            left:50%; 
+            padding:50px; 
+            transform:translate(-50%,-50%);  
+            background:rgba(255,255,255,0.35);
+            backdrop-filter: blur(15px); 
+        }
+
+        .container form {
+            width:100%; 
+            height:100%; 
+            display:flex; 
+            align-items:center; 
+            justify-content:space-around; 
+            flex-direction:column; 
+        }
+
+        .container form input{
+            width:60%; 
+            font-size:30px; 
+            outline:none; 
+            border:none; 
+            background:transparent; 
+            border:2px solid black; 
+            padding:10px 20px;
+            margin-bottom:30px; 
+            border-radius:20px;    
+        }
+
+        .container form input::placeholder{
+            color:white; 
+            opacity:.8;
+            letter-spacing: 3px; 
+        }
+
+        input[type = 'number']::-webkit-outer-spin-button,
+        input[type = 'number']::-webkit-inner-spin-button{
+            -webkit-appearance:none; 
+        }
+
+        .container form button{
+            font-size:30px;   
+            padding:5px 10px; 
+            background: none;
+            cursor:pointer; 
+            transition:.5s;   
+            outline:none; 
+            letter-spacing: 3px;
+            font-weight:500; 
+            font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;   
+        }
+
+        .container form button:hover,
+        .container form button:active{  
+            background:black; 
+            color:white; 
+            box-shadow:2px 2px 40px rgba(0,0,0,0.5);
+        }
+
+        #back{
+            position:absolute; 
+            right:0; 
+            bottom:0; 
+            margin:20px; 
+            font-family:cursive; 
+            text-decoration:none; 
+            font-size:22px;  
+        }
+
+        .adjust{
+            display:flex; 
+            width:100%; 
+            margin-top:20px; 
+            flex-direction:row; 
+            justify-content:flex-end; 
+            align-items:center; 
+
+        }
+
+        #circle1,#circle2{
+            position:absolute; 
+            height:500px; 
+            width:500px; 
+            border-radius:50%; 
+        }
+
+    </style> 
+    <script type = 'text/javascript' defer> 
+        const mail = document.querySelector('#mail'); 
+        const ph = document.querySelector('#ph');  
+        const sub = document.querySelector('#sub');  
+        sub.onclick = function(){
+            if(mail.value && ph.value){
+                alert('Password Reset Link will be sent to the provided Credentials');  
+                mail.value = ''; 
+                ph.value = ''; 
+            } 
+        }; 
+    </script>
+</body>
+</html>

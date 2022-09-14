@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title> 
+    <link rel="stylesheet" href="Alert.css"> 
+</head>
+<body>
+    <header class = 'nav'> 
+        <div class="logo"><span><a href = 'Main.html'>hire up</a></span></div> 
+        <div class = 'wrapper'>  
+            <ul class = 'lst'>
+                <li id = 'home'><a href = 'Home.html' >Home</a></li>
+                <li id = 'alerts'><a href = 'Alert.html'>Alerts</a></li>
+                <li id = 'about'><a id = 'about' href = 'About.html'>ABout</a></li>  
+                <li id = 'dashboard'><a>DashBoard</a></li>  
+            </ul> 
+        </div>
+    </header>
+    <div class="container">
+        <h2 class = 'title'>Rick Rolled</h2> 
+        <div class="videobox">
+            <video id = "rickrolled" src="Images/rickroll.mp4" type = "video/mp4" controls autoplay muted loop></video> 
+        </div>
+    </div>
+
+    <script type = 'text/javascript' defer> 
+        var rickroll = document.querySelector('#rickrolled'); 
+        setTimeout(()=>{
+            rickroll.muted = false; 
+        },500); 
+    </script>
+</body>
+</html>

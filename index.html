@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link href = "index.css" rel = 'stylesheet' type = 'text/css' /> 
+    <script src = 'index.js' type = 'text/javascript' defer ></script>  
+</head>
+<body>
+    <header class = menu> 
+        <div class = 'logo'><a href = 'main.html'><i>hire up</i></a></div>
+    </header>
+    <div class="container">
+        <div class="signin">
+            <h3>Already have an Account?</h3>   
+            <button type = 'submit' id = 'signbtn'>Sign In</button>   
+        </div>
+        <div class = 'signup'> 
+            <h3>Don't have an Account? Create One!</h3>   
+            <button type = 'button' id = 'regbtn'>Register</button>
+        </div>
+        <div class="formcover"> 
+            <div class="form signinbox">
+                <form onsubmit ="return false">   
+                    <h3>Sign IN</h3> 
+                    <input type = 'text' placeholder = 'Username' required id = 'username' />  
+                    <input type="password" placeholder = 'Password' required id = 'password' />  
+                    <button type = 'submit' id = 'loginbtn'>Login</button>
+                    <a href = 'Forgot.html ' id = 'forgot'>Forgot Password</a> 
+                </form> 
+            </div>
+            <div class="form signupbox">
+                <form onsubmit = "return false">  
+                    <h3>Sign Up</h3>  
+                    <input type = 'text' placeholder = 'FirstName' id = 'firstname' required />  
+                    <input type="text" placeholder = 'LastName' id = 'lastname' required /> 
+                    <input type = 'email' placeholder = 'Email ID' id = 'mail' required /> 
+                    <input type="password" placeholder = 'Password' id = 'get_password' required /> 
+                    <input type="password" placeholder = 'Confirm Password' id = 'confirm_password' required /> 
+                    <button type = 'submit' id = 'submitbtn'>Submit</button>
+                </form> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
